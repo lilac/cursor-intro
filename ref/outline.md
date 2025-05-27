@@ -1,0 +1,56 @@
+# Create a deck on cursor's features and how it works
+
+## Features
+
+- Tab autocomplete
+  - Use a fast prediction model on where to jump next.
+  - Autocomplete code at current cursor
+- Context
+  - Allow user to add content as chat context
+  - File & folder
+  - Code
+  - Docs
+  - Git
+  - Past chats
+  - Terminals
+  - Lint errors
+  - Web page (via URL)
+  - Images
+- Code index
+- Tools
+  - Fetch web content via user provided URL
+  - Web search
+  - Exec commands via terminal
+  - MCP tools
+- Agent mode
+  - Planner to call tools as appropriate
+  - I guess it outputs code diff instead of raw code?
+  - Apply code changes
+
+## My thoughts
+
+- Cursor is mostly for pair programming
+- Magic = Human intelligence + Artificial intelligence
+  - Human good at memory and analysis
+  - Human as architect and project manager
+  - AI is much more efficient at generating text/code
+  - AI as code writer
+- My workflow
+  - Break down product design into seperate specific tasks
+  - For each task come up with basic change
+  - Create new chat and add related code files as context
+  - Write specific prompt for the task
+- Demo
+  - A full CLI app called mcpbar, package manager of MCP servers
+  - How cursor write >90% code of [mcpbar](https://github.com/in-fun/mcpbar)
+  - Use open source template to bootstrap new projects
+
+## Reference
+
+### Leaked prompts
+- [Agent](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools/blob/main/Cursor%20Prompts/Agent%20Prompt.txt)
+- [Chat](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools/blob/main/Cursor%20Prompts/Chat%20Prompt.txt)
+
+### Interview
+
+[Transcript of an interview with Cursor team](./cursor-interview.md)
