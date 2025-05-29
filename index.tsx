@@ -13,7 +13,8 @@ import {
   Quote,
   Image,
   Box,
-  Appear
+  Appear,
+  Link
 } from 'spectacle'
 
 const theme = {
@@ -140,7 +141,7 @@ const Presentation = () => (
       </Appear>
     </Slide>
 
-    {/* Context System */}
+    {/* Smart Context System */}
     <Slide backgroundColor="tertiary">
       <Heading color="primary" fontSize="h2" margin="0 0 2rem 0">
         Smart Context System
@@ -162,12 +163,56 @@ const Presentation = () => (
         <Box width="45%">
           <Text color="secondary" fontSize="h3" margin="0 0 1rem 0">How it works:</Text>
           <UnorderedList color="primary" fontSize="text">
-            <Appear><ListItem margin="0.5rem 0">Semantic indexing of your codebase</ListItem></Appear>
-            <Appear><ListItem margin="0.5rem 0">Automatic relevance detection</ListItem></Appear>
+            <Appear><ListItem margin="0.5rem 0">Semantic codebase indexing</ListItem></Appear>
             <Appear><ListItem margin="0.5rem 0">Merkle tree sync for large repos</ListItem></Appear>
-            <Appear><ListItem margin="0.5rem 0">Smart prompt engineering (JSX-like)</ListItem></Appear>
+            <Appear><ListItem margin="0.5rem 0">Privacy-preserving embeddings</ListItem></Appear>
           </UnorderedList>
         </Box>
+      </FlexBox>
+    </Slide>
+
+    {/* Codebase Indexing Deep Dive */}
+    <Slide backgroundColor="primary">
+      <Heading color="secondary" fontSize="h2" margin="0 0 2rem 0">
+        🔍 Codebase Indexing Deep Dive
+      </Heading>
+      <Text color="tertiary" fontSize="text" margin="0 0 2rem 0">
+        Semantic understanding of your entire codebase without storing your code
+      </Text>
+      <FlexBox flexDirection="column">
+        <Text color="secondary" fontSize="h3" margin="0 0 1rem 0">How it works:</Text>
+        <UnorderedList color="tertiary" fontSize="text">
+          <Appear>
+            <ListItem margin="0.8rem 0">
+              <strong>File scanning:</strong> Computes Merkle tree of hashes, respects .gitignore/.cursorignore
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem margin="0.8rem 0">
+              <strong>Incremental sync:</strong> Checks every 10 minutes, uploads only changed files
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem margin="0.8rem 0">
+              <strong>Server processing:</strong> Chunks and embeds files, stores in Turbopuffer vector DB
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem margin="0.8rem 0">
+              <strong>Privacy-preserving storage:</strong> Only embeddings + obfuscated paths stored
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem margin="0.8rem 0">
+              <strong>Smart retrieval:</strong> Nearest neighbor search → local file read → context to AI
+            </ListItem>
+          </Appear>
+        </UnorderedList>
+        <Appear>
+          <Text color="tertiary" fontSize="text" margin="2rem 0" textAlign="center">
+            <Link href="https://www.cursor.com/cn/security#codebase-indexing">Learn more</Link>
+          </Text>
+        </Appear>
       </FlexBox>
     </Slide>
 
