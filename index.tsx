@@ -1,5 +1,5 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
+import React from "react";
+import { createRoot } from "react-dom/client";
 import {
   Deck,
   DefaultTemplate,
@@ -14,43 +14,53 @@ import {
   Image,
   Box,
   Appear,
-  Link
-} from 'spectacle'
+  Link,
+} from "spectacle";
 
 const theme = {
   colors: {
-    primary: '#1a1a1a',
-    secondary: '#6366f1',
-    tertiary: '#f8fafc',
-    quaternary: '#10b981',
-    quinary: '#ef4444'
+    primary: "#1a1a1a",
+    secondary: "#6366f1",
+    tertiary: "#f8fafc",
+    quaternary: "#10b981",
+    quinary: "#ef4444",
   },
   fonts: {
     header: '"SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif',
     text: '"SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif',
-    monospace: '"SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace'
+    monospace: '"SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace',
   },
   fontSizes: {
-    h1: '3.5rem',
-    h2: '2.5rem',
-    h3: '2rem',
-    text: '1.5rem',
-    monospace: '1.2rem'
-  }
+    h1: "3.5rem",
+    h2: "2.5rem",
+    h3: "2rem",
+    text: "1.5rem",
+    monospace: "1.2rem",
+  },
 };
 
 const Presentation = () => (
   <Deck theme={theme} template={() => <DefaultTemplate color="#6366f1" />}>
-
     {/* Title Slide */}
     <Slide backgroundColor="primary">
-      <FlexBox height="100%" flexDirection="column" justifyContent="center" alignItems="center">
-        <Heading color="secondary" fontSize="h1" margin="0 0 2rem 0">
-          Cursor
+      <FlexBox
+        height="100%"
+        flexDirection="column"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Heading
+          color="secondary"
+          fontSize="h1"
+          margin="0 0 2rem 0"
+          className="rounded-none"
+        >
+          Cursor Editor
         </Heading>
         <Text color="tertiary" fontSize="h3" margin="0 0 1rem 0">
           The AI-Powered Code Editor
         </Text>
+
         <Text color="tertiary" fontSize="text" textAlign="center">
           Revolutionizing Programming with Human-AI Collaboration
         </Text>
@@ -64,20 +74,33 @@ const Presentation = () => (
       </Heading>
       <UnorderedList color="primary" fontSize="text">
         <Appear>
-          <ListItem margin="1rem 0">A fork of VS Code with powerful AI features</ListItem>
+          <ListItem margin="1rem 0">
+            A fork of VS Code with powerful AI features
+          </ListItem>
         </Appear>
         <Appear>
-          <ListItem margin="1rem 0">Built by team who believed in scaling laws and GPT-4's potential</ListItem>
+          <ListItem margin="1rem 0">
+            Built by team who believed in scaling laws and GPT-4's potential
+          </ListItem>
         </Appear>
         <Appear>
-          <ListItem margin="1rem 0">Designed for <em>human-AI collaboration</em>, not replacement</ListItem>
+          <ListItem margin="1rem 0">
+            Designed for <em>human-AI collaboration</em>, not replacement
+          </ListItem>
         </Appear>
         <Appear>
-          <ListItem margin="1rem 0">Used by hundreds of thousands of programmers</ListItem>
+          <ListItem margin="1rem 0">
+            Used by hundreds of thousands of programmers
+          </ListItem>
         </Appear>
       </UnorderedList>
       <Appear>
-        <Quote color="secondary" fontSize="text" margin="2rem 0" borderLeft="4px solid">
+        <Quote
+          color="secondary"
+          fontSize="text"
+          margin="2rem 0"
+          borderLeft="4px solid"
+        >
           "Fast is fun. Programming should be delightful."
         </Quote>
       </Appear>
@@ -85,7 +108,12 @@ const Presentation = () => (
 
     {/* Core Philosophy */}
     <Slide backgroundColor="primary">
-      <FlexBox height="100%" justifyContent="center" alignItems="center" flexDirection="column">
+      <FlexBox
+        height="100%"
+        justifyContent="center"
+        alignItems="center"
+        flexDirection="column"
+      >
         <Heading color="secondary" fontSize="h2" margin="0 0 2rem 0">
           Core Philosophy
         </Heading>
@@ -95,12 +123,14 @@ const Presentation = () => (
         <UnorderedList color="tertiary" fontSize="text" margin="2rem 0">
           <Appear>
             <ListItem margin="1rem 0">
-              <strong>Human:</strong> Memory, analysis, architecture, project management
+              <strong>Human a:</strong> Memory, analysis, architecture, project
+              management
             </ListItem>
           </Appear>
           <Appear>
             <ListItem margin="1rem 0">
-              <strong>AI:</strong> Efficient text/code generation, pattern recognition
+              <strong>AI:</strong> Efficient text/code generation, pattern
+              recognition
             </ListItem>
           </Appear>
           <Appear>
@@ -122,20 +152,31 @@ const Presentation = () => (
       </Text>
       <UnorderedList color="tertiary" fontSize="text">
         <Appear>
-          <ListItem margin="1rem 0">Predicts entire code changes, not just characters</ListItem>
+          <ListItem margin="1rem 0">
+            Predicts entire code changes, not just characters
+          </ListItem>
         </Appear>
         <Appear>
-          <ListItem margin="1rem 0">Jumps to next logical editing location</ListItem>
+          <ListItem margin="1rem 0">
+            Jumps to next logical editing location
+          </ListItem>
         </Appear>
         <Appear>
-          <ListItem margin="1rem 0">Uses fast MOE models with speculative decoding</ListItem>
+          <ListItem margin="1rem 0">
+            Uses fast MOE models with speculative decoding
+          </ListItem>
         </Appear>
         <Appear>
           <ListItem margin="1rem 0">Goal: Press Tab → Make progress</ListItem>
         </Appear>
       </UnorderedList>
       <Appear>
-        <Quote color="tertiary" fontSize="text" margin="2rem 0" borderLeft="4px solid white">
+        <Quote
+          color="tertiary"
+          fontSize="text"
+          margin="2rem 0"
+          borderLeft="4px solid white"
+        >
           "How many Tabs can we make someone press?"
         </Quote>
       </Appear>
@@ -148,24 +189,54 @@ const Presentation = () => (
       </Heading>
       <FlexBox flexDirection="row" justifyContent="space-between">
         <Box width="45%">
-          <Text color="secondary" fontSize="h3" margin="0 0 1rem 0">What you can add:</Text>
+          <Text color="secondary" fontSize="h3" margin="0 0 1rem 0">
+            What you can add:
+          </Text>
           <UnorderedList color="primary" fontSize="text">
-            <Appear><ListItem margin="0.5rem 0">Files & folders</ListItem></Appear>
-            <Appear><ListItem margin="0.5rem 0">Code snippets</ListItem></Appear>
-            <Appear><ListItem margin="0.5rem 0">Documentation</ListItem></Appear>
-            <Appear><ListItem margin="0.5rem 0">Git history</ListItem></Appear>
-            <Appear><ListItem margin="0.5rem 0">Terminal output</ListItem></Appear>
-            <Appear><ListItem margin="0.5rem 0">Lint errors</ListItem></Appear>
-            <Appear><ListItem margin="0.5rem 0">Web pages</ListItem></Appear>
-            <Appear><ListItem margin="0.5rem 0">Images</ListItem></Appear>
+            <Appear>
+              <ListItem margin="0.5rem 0">Files & folders</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem margin="0.5rem 0">Code snippets</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem margin="0.5rem 0">Documentation</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem margin="0.5rem 0">Git history</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem margin="0.5rem 0">Terminal output</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem margin="0.5rem 0">Lint errors</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem margin="0.5rem 0">Web pages</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem margin="0.5rem 0">Images</ListItem>
+            </Appear>
           </UnorderedList>
         </Box>
         <Box width="45%">
-          <Text color="secondary" fontSize="h3" margin="0 0 1rem 0">How it works:</Text>
+          <Text color="secondary" fontSize="h3" margin="0 0 1rem 0">
+            How it works:
+          </Text>
           <UnorderedList color="primary" fontSize="text">
-            <Appear><ListItem margin="0.5rem 0">Semantic codebase indexing</ListItem></Appear>
-            <Appear><ListItem margin="0.5rem 0">Merkle tree sync for large repos</ListItem></Appear>
-            <Appear><ListItem margin="0.5rem 0">Privacy-preserving embeddings</ListItem></Appear>
+            <Appear>
+              <ListItem margin="0.5rem 0">Semantic codebase indexing</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem margin="0.5rem 0">
+                Merkle tree sync for large repos
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem margin="0.5rem 0">
+                Privacy-preserving embeddings
+              </ListItem>
+            </Appear>
           </UnorderedList>
         </Box>
       </FlexBox>
@@ -180,37 +251,51 @@ const Presentation = () => (
         Semantic understanding of your entire codebase without storing your code
       </Text>
       <FlexBox flexDirection="column">
-        <Text color="secondary" fontSize="h3" margin="0 0 1rem 0">How it works:</Text>
+        <Text color="secondary" fontSize="h3" margin="0 0 1rem 0">
+          How it works:
+        </Text>
         <UnorderedList color="tertiary" fontSize="text">
           <Appear>
             <ListItem margin="0.8rem 0">
-              <strong>File scanning:</strong> Computes Merkle tree of hashes, respects .gitignore/.cursorignore
+              <strong>File scanning:</strong> Computes Merkle tree of hashes,
+              respects .gitignore/.cursorignore
             </ListItem>
           </Appear>
           <Appear>
             <ListItem margin="0.8rem 0">
-              <strong>Incremental sync:</strong> Checks every 10 minutes, uploads only changed files
+              <strong>Incremental sync:</strong> Checks every 10 minutes,
+              uploads only changed files
             </ListItem>
           </Appear>
           <Appear>
             <ListItem margin="0.8rem 0">
-              <strong>Server processing:</strong> Chunks and embeds files, stores in Turbopuffer vector DB
+              <strong>Server processing:</strong> Chunks and embeds files,
+              stores in Turbopuffer vector DB
             </ListItem>
           </Appear>
           <Appear>
             <ListItem margin="0.8rem 0">
-              <strong>Privacy-preserving storage:</strong> Only embeddings + obfuscated paths stored
+              <strong>Privacy-preserving storage:</strong> Only embeddings +
+              obfuscated paths stored
             </ListItem>
           </Appear>
           <Appear>
             <ListItem margin="0.8rem 0">
-              <strong>Smart retrieval:</strong> Nearest neighbor search → local file read → context to AI
+              <strong>Smart retrieval:</strong> Nearest neighbor search → local
+              file read → context to AI
             </ListItem>
           </Appear>
         </UnorderedList>
         <Appear>
-          <Text color="tertiary" fontSize="text" margin="2rem 0" textAlign="center">
-            <Link href="https://www.cursor.com/cn/security#codebase-indexing">Learn more</Link>
+          <Text
+            color="tertiary"
+            fontSize="text"
+            margin="2rem 0"
+            textAlign="center"
+          >
+            <Link href="https://www.cursor.com/cn/security#codebase-indexing">
+              Learn more
+            </Link>
           </Text>
         </Appear>
       </FlexBox>
@@ -222,12 +307,11 @@ const Presentation = () => (
         Apply: From Sketch to Code
       </Heading>
       <Text color="tertiary" fontSize="text" margin="0 0 2rem 0">
-        Frontier models create rough sketches → Custom models generate precise diffs
+        Frontier models create rough sketches → Custom models generate precise
+        diffs
       </Text>
-      <CodePane
-        language="typescript"
-        showLineNumbers={false}
-      >{`// You write this rough idea:
+      <CodePane language="typescript" showLineNumbers={false}>
+        {`// You write this rough idea:
 function processUsers() {
   // TODO: fetch users from API
   // validate data
@@ -252,7 +336,8 @@ async function processUsers() {
   }));
   
   await db.users.insertMany(transformedUsers);
-}`}</CodePane>
+}`}
+      </CodePane>
     </Slide>
 
     {/* Diff Interface */}
@@ -263,28 +348,38 @@ async function processUsers() {
       <UnorderedList color="primary" fontSize="text">
         <Appear>
           <ListItem margin="1rem 0">
-            <strong>Multiple diff modes:</strong> Optimized for autocomplete vs. large changes
+            <strong>Multiple diff modes:</strong> Optimized for autocomplete vs.
+            large changes
           </ListItem>
         </Appear>
         <Appear>
           <ListItem margin="1rem 0">
-            <strong>Smart highlighting:</strong> Show important changes, gray out repetitive ones
+            <strong>Smart highlighting:</strong> Show important changes, gray
+            out repetitive ones
           </ListItem>
         </Appear>
         <Appear>
           <ListItem margin="1rem 0">
-            <strong>Multi-file support:</strong> Coordinated changes across your codebase
+            <strong>Multi-file support:</strong> Coordinated changes across your
+            codebase
           </ListItem>
         </Appear>
         <Appear>
           <ListItem margin="1rem 0">
-            <strong>Background processing:</strong> Shadow workspace for testing changes
+            <strong>Background processing:</strong> Shadow workspace for testing
+            changes
           </ListItem>
         </Appear>
       </UnorderedList>
       <Appear>
-        <Text color="secondary" fontSize="text" margin="2rem 0" fontStyle="italic">
-          "Code review kind of sucks. We can do much better with language models."
+        <Text
+          color="secondary"
+          fontSize="text"
+          margin="2rem 0"
+          fontStyle="italic"
+        >
+          "Code review kind of sucks. We can do much better with language
+          models."
         </Text>
       </Appear>
     </Slide>
@@ -310,7 +405,8 @@ async function processUsers() {
         </Appear>
         <Appear>
           <ListItem margin="1rem 0">
-            <strong>File system access:</strong> Create, modify, and organize files
+            <strong>File system access:</strong> Create, modify, and organize
+            files
           </ListItem>
         </Appear>
         <Appear>
@@ -332,7 +428,9 @@ async function processUsers() {
         Under the Hood
       </Heading>
       <FlexBox flexDirection="column">
-        <Text color="tertiary" fontSize="h3" margin="0 0 1rem 0">Model Ensemble:</Text>
+        <Text color="tertiary" fontSize="h3" margin="0 0 1rem 0">
+          Model Ensemble:
+        </Text>
         <UnorderedList color="tertiary" fontSize="text">
           <Appear>
             <ListItem margin="0.5rem 0">
@@ -351,12 +449,28 @@ async function processUsers() {
           </Appear>
         </UnorderedList>
 
-        <Text color="tertiary" fontSize="h3" margin="2rem 0 1rem 0">Performance Optimizations:</Text>
+        <Text color="tertiary" fontSize="h3" margin="2rem 0 1rem 0">
+          Performance Optimizations:
+        </Text>
         <UnorderedList color="tertiary" fontSize="text">
-          <Appear><ListItem margin="0.5rem 0">Speculative decoding for faster generation</ListItem></Appear>
-          <Appear><ListItem margin="0.5rem 0">KV cache optimization</ListItem></Appear>
-          <Appear><ListItem margin="0.5rem 0">MOE (Mixture of Experts) models</ListItem></Appear>
-          <Appear><ListItem margin="0.5rem 0">Cache warming and preemptive requests</ListItem></Appear>
+          <Appear>
+            <ListItem margin="0.5rem 0">
+              Speculative decoding for faster generation
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem margin="0.5rem 0">KV cache optimization</ListItem>
+          </Appear>
+          <Appear>
+            <ListItem margin="0.5rem 0">
+              MOE (Mixture of Experts) models
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem margin="0.5rem 0">
+              Cache warming and preemptive requests
+            </ListItem>
+          </Appear>
         </UnorderedList>
       </FlexBox>
     </Slide>
@@ -369,17 +483,20 @@ async function processUsers() {
       <UnorderedList color="primary" fontSize="text">
         <Appear>
           <ListItem margin="1rem 0">
-            <strong>Break down tasks:</strong> Decompose features into specific, implementable chunks
+            <strong>Break down tasks:</strong> Decompose features into specific,
+            implementable chunks
           </ListItem>
         </Appear>
         <Appear>
           <ListItem margin="1rem 0">
-            <strong>Add relevant context:</strong> Include related files, docs, and examples
+            <strong>Add relevant context:</strong> Include related files, docs,
+            and examples
           </ListItem>
         </Appear>
         <Appear>
           <ListItem margin="1rem 0">
-            <strong>Start new chats:</strong> Fresh context for each distinct task
+            <strong>Start new chats:</strong> Fresh context for each distinct
+            task
           </ListItem>
         </Appear>
         <Appear>
@@ -389,12 +506,14 @@ async function processUsers() {
         </Appear>
         <Appear>
           <ListItem margin="1rem 0">
-            <strong>Iterate quickly:</strong> Make small changes and build incrementally
+            <strong>Iterate quickly:</strong> Make small changes and build
+            incrementally
           </ListItem>
         </Appear>
         <Appear>
           <ListItem margin="1rem 0">
-            <strong>Review AI output:</strong> You're the architect, AI is the implementer
+            <strong>Review AI output:</strong> You're the architect, AI is the
+            implementer
           </ListItem>
         </Appear>
       </UnorderedList>
@@ -436,7 +555,12 @@ async function processUsers() {
         </Appear>
       </UnorderedList>
       <Appear>
-        <Text color="tertiary" fontSize="text" margin="2rem 0" fontStyle="italic">
+        <Text
+          color="tertiary"
+          fontSize="text"
+          margin="2rem 0"
+          fontStyle="italic"
+        >
           "Human as project manager, AI as senior developer"
         </Text>
       </Appear>
@@ -450,22 +574,26 @@ async function processUsers() {
       <UnorderedList color="tertiary" fontSize="text">
         <Appear>
           <ListItem margin="1rem 0">
-            <strong>Bug detection:</strong> Models struggle with finding subtle bugs
+            <strong>Bug detection:</strong> Models struggle with finding subtle
+            bugs
           </ListItem>
         </Appear>
         <Appear>
           <ListItem margin="1rem 0">
-            <strong>Large diffs:</strong> Reviewing big changes is still challenging
+            <strong>Large diffs:</strong> Reviewing big changes is still
+            challenging
           </ListItem>
         </Appear>
         <Appear>
           <ListItem margin="1rem 0">
-            <strong>Context limits:</strong> Can't include entire large codebases
+            <strong>Context limits:</strong> Can't include entire large
+            codebases
           </ListItem>
         </Appear>
         <Appear>
           <ListItem margin="1rem 0">
-            <strong>Domain knowledge:</strong> May lack specific business context
+            <strong>Domain knowledge:</strong> May lack specific business
+            context
           </ListItem>
         </Appear>
         <Appear>
@@ -475,7 +603,12 @@ async function processUsers() {
         </Appear>
       </UnorderedList>
       <Appear>
-        <Text color="secondary" fontSize="text" margin="2rem 0" textAlign="center">
+        <Text
+          color="secondary"
+          fontSize="text"
+          margin="2rem 0"
+          textAlign="center"
+        >
           But these are improving rapidly! 🚀
         </Text>
       </Appear>
@@ -486,13 +619,19 @@ async function processUsers() {
       <Heading color="primary" fontSize="h2" margin="0 0 2rem 0">
         The Future of Programming
       </Heading>
-      <Quote color="secondary" fontSize="text" margin="0 0 2rem 0" borderLeft="4px solid">
+      <Quote
+        color="secondary"
+        fontSize="text"
+        margin="0 0 2rem 0"
+        borderLeft="4px solid"
+      >
         "A human-AI programmer that's an order of magnitude more effective"
       </Quote>
       <UnorderedList color="primary" fontSize="text">
         <Appear>
           <ListItem margin="1rem 0">
-            <strong>Abstraction control:</strong> Move up and down the stack seamlessly
+            <strong>Abstraction control:</strong> Move up and down the stack
+            seamlessly
           </ListItem>
         </Appear>
         <Appear>
@@ -502,17 +641,20 @@ async function processUsers() {
         </Appear>
         <Appear>
           <ListItem margin="1rem 0">
-            <strong>Formal verification:</strong> AI-generated proofs for correctness
+            <strong>Formal verification:</strong> AI-generated proofs for
+            correctness
           </ListItem>
         </Appear>
         <Appear>
           <ListItem margin="1rem 0">
-            <strong>Background agents:</strong> Autonomous helpers for routine tasks
+            <strong>Background agents:</strong> Autonomous helpers for routine
+            tasks
           </ListItem>
         </Appear>
         <Appear>
           <ListItem margin="1rem 0">
-            <strong>Human in driver's seat:</strong> You make the important decisions
+            <strong>Human in driver's seat:</strong> You make the important
+            decisions
           </ListItem>
         </Appear>
       </UnorderedList>
@@ -531,7 +673,8 @@ async function processUsers() {
         </Appear>
         <Appear>
           <ListItem margin="1rem 0">
-            <strong>Import:</strong> Your existing VS Code settings and extensions
+            <strong>Import:</strong> Your existing VS Code settings and
+            extensions
           </ListItem>
         </Appear>
         <Appear>
@@ -556,15 +699,26 @@ async function processUsers() {
         </Appear>
       </UnorderedList>
       <Appear>
-        <Text color="tertiary" fontSize="text" margin="2rem 0" textAlign="center">
-          Remember: You're learning to collaborate with AI, not be replaced by it
+        <Text
+          color="tertiary"
+          fontSize="text"
+          margin="2rem 0"
+          textAlign="center"
+        >
+          Remember: You're learning to collaborate with AI, not be replaced by
+          it
         </Text>
       </Appear>
     </Slide>
 
     {/* Q&A */}
     <Slide backgroundColor="primary">
-      <FlexBox height="100%" flexDirection="column" justifyContent="center" alignItems="center">
+      <FlexBox
+        height="100%"
+        flexDirection="column"
+        justifyContent="center"
+        alignItems="center"
+      >
         <Heading color="secondary" fontSize="h1" margin="0 0 2rem 0">
           Questions?
         </Heading>
@@ -576,8 +730,7 @@ async function processUsers() {
         </Text>
       </FlexBox>
     </Slide>
-
   </Deck>
 );
 
-createRoot(document.getElementById('app')!).render(<Presentation />);
+createRoot(document.getElementById("app")!).render(<Presentation />);
