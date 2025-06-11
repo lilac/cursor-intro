@@ -53,4 +53,5 @@
 
 ### Interview
 
+[Interview on YouTube](https://www.youtube.com/watch?v=oFfVt3S51T4)
 [Transcript of an interview with Cursor team](./cursor-interview.md)

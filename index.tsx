@@ -123,7 +123,7 @@ const Presentation = () => (
         <UnorderedList color="tertiary" fontSize="text" margin="2rem 0">
           <Appear>
             <ListItem margin="1rem 0">
-              <strong>Human a:</strong> Memory, analysis, architecture, project
+              <strong>Human:</strong> Memory, analysis, architecture, project
               management
             </ListItem>
           </Appear>
@@ -180,6 +180,59 @@ const Presentation = () => (
           "How many Tabs can we make someone press?"
         </Quote>
       </Appear>
+    </Slide>
+
+    {/* Next Move Prediction Deep Dive */}
+    <Slide backgroundColor="primary">
+      <Heading color="secondary" fontSize="h2" margin="0 0 1.5rem 0">
+        How Next Move Prediction Works
+      </Heading>
+      <Text color="tertiary" fontSize="text" margin="0 0 1.5rem 0">
+        [Fill-in-the-middle](https://github.com/QwenLM/Qwen2.5-Coder): A generalization of code completion
+      </Text>
+      <FlexBox flexDirection="row" justifyContent="space-between">
+        <Box width="48%">
+          <Text color="secondary" fontSize="h3" margin="0 0 1rem 0">
+            What you see:
+          </Text>
+          <CodePane language="python" showLineNumbers={true}>
+            {`def quicksort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    |  # ← cursor here
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quicksort(left) + middle + quicksort(right)`}
+          </CodePane>
+        </Box>
+        <Box width="48%">
+          <Text color="secondary" fontSize="h3" margin="0 0 1rem 0">
+            What the AI sees:
+          </Text>
+          <CodePane language="python" showLineNumbers={false}>
+            {`<|fim_prefix|>def quicksort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    <|fim_suffix|>
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quicksort(left) + middle + quicksort(right)
+<|fim_middle|>`}
+          </CodePane>
+          <Appear>
+            <Text color="tertiary" fontSize="text" margin="1rem 0 0 0">
+              Model generates: <code style={{color: "#10b981"}}>left = [x for x in arr if x &lt; pivot]</code>
+            </Text>
+          </Appear>
+        </Box>
+      </FlexBox>
+      {/* <Appear>
+        <Text color="tertiary" fontSize="text" margin="1.5rem 0 0 0" textAlign="center">
+          Custom models trained on massive code datasets predict the missing piece
+        </Text>
+      </Appear> */}
     </Slide>
 
     {/* Smart Context System */}
@@ -525,7 +578,8 @@ async function processUsers() {
         Real-World Example
       </Heading>
       <Text color="tertiary" fontSize="text" margin="0 0 2rem 0">
-        Building mcpbar: A CLI package manager for MCP servers
+        Building <Link href="https://github.com/in-fun/mcpbar" target="_blank">mcpbar</Link>:
+        A CLI package manager for MCP servers
       </Text>
       <UnorderedList color="tertiary" fontSize="text">
         <Appear>
@@ -561,7 +615,7 @@ async function processUsers() {
           margin="2rem 0"
           fontStyle="italic"
         >
-          "Human as project manager, AI as senior developer"
+          "Human as project manager, AI as highly productive developer"
         </Text>
       </Appear>
     </Slide>
@@ -627,6 +681,39 @@ async function processUsers() {
       >
         "A human-AI programmer that's an order of magnitude more effective"
       </Quote>
+
+      {/* Complementary Strengths Section */}
+      <FlexBox flexDirection="row" justifyContent="space-between" margin="0 0 2rem 0">
+        <Box width="48%">
+          <Text color="secondary" fontSize="h3" margin="0 0 1rem 0">
+            Human Strengths:
+          </Text>
+          <UnorderedList color="primary" fontSize="text">
+            <ListItem margin="0.5rem 0">Intent understanding</ListItem>
+            <ListItem margin="0.5rem 0">Long-term memory</ListItem>
+            <ListItem margin="0.5rem 0">Business context</ListItem>
+            <ListItem margin="0.5rem 0">Architecture decisions</ListItem>
+          </UnorderedList>
+          <Text color="quinary" fontSize="text" margin="1rem 0 0 0">
+            <strong>Weakness:</strong> Slow at code production
+          </Text>
+        </Box>
+        <Box width="48%">
+          <Text color="secondary" fontSize="h3" margin="0 0 1rem 0">
+            AI Strengths:
+          </Text>
+          <UnorderedList color="primary" fontSize="text">
+            <ListItem margin="0.5rem 0">Very productive code writing</ListItem>
+            <ListItem margin="0.5rem 0">Pattern recognition</ListItem>
+            <ListItem margin="0.5rem 0">Syntax perfection</ListItem>
+            <ListItem margin="0.5rem 0">Rapid iteration</ListItem>
+          </UnorderedList>
+          <Text color="quinary" fontSize="text" margin="1rem 0 0 0">
+            <strong>Weakness:</strong> Limited context & memory
+          </Text>
+        </Box>
+      </FlexBox>
+
       <UnorderedList color="primary" fontSize="text">
         <Appear>
           <ListItem margin="1rem 0">
@@ -641,27 +728,15 @@ async function processUsers() {
         </Appear>
         <Appear>
           <ListItem margin="1rem 0">
-            <strong>Formal verification:</strong> AI-generated proofs for
-            correctness
-          </ListItem>
-        </Appear>
-        <Appear>
-          <ListItem margin="1rem 0">
             <strong>Background agents:</strong> Autonomous helpers for routine
             tasks
-          </ListItem>
-        </Appear>
-        <Appear>
-          <ListItem margin="1rem 0">
-            <strong>Human in driver's seat:</strong> You make the important
-            decisions
           </ListItem>
         </Appear>
       </UnorderedList>
     </Slide>
 
     {/* Getting Started */}
-    <Slide backgroundColor="secondary">
+    {/* <Slide backgroundColor="secondary">
       <Heading color="tertiary" fontSize="h2" margin="0 0 2rem 0">
         Getting Started with Cursor
       </Heading>
@@ -709,6 +784,58 @@ async function processUsers() {
           it
         </Text>
       </Appear>
+    </Slide> */}
+
+    {/* Bonus Slide */}
+    <Slide backgroundColor="secondary">
+      <Heading color="tertiary" fontSize="h2" margin="0 0 2rem 0">
+        🎁 Bonus for Curious Minds
+      </Heading>
+      <Text color="tertiary" fontSize="text" margin="0 0 2rem 0">
+        Want to dive deeper into how Cursor works?
+      </Text>
+      <UnorderedList color="tertiary" fontSize="text">
+        <Appear>
+          <ListItem margin="1.5rem 0">
+            <strong>Peek behind the curtain:</strong> View the{" "}
+            <Link 
+              href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools/blob/main/Cursor%20Prompts/Agent%20Prompt.txt" 
+              target="_blank"
+              color="tertiary"
+              textDecoration="underline"
+            >
+              leaked prompt
+            </Link>{" "}
+            from Cursor's agent mode to understand in-depth how it works
+          </ListItem>
+        </Appear>
+        <Appear>
+          <ListItem margin="1.5rem 0">
+            <strong>See AI in action:</strong> This slide deck itself was written in Cursor 
+            and co-edited by the Cursor agent! Check out the{" "}
+            <Link 
+              href="https://github.com/lilac/cursor-intro" 
+              target="_blank"
+              color="tertiary"
+              textDecoration="underline"
+            >
+              source code
+            </Link>{" "}
+            to see how I automate slide creation with AI
+          </ListItem>
+        </Appear>
+      </UnorderedList>
+      <Appear>
+        <Text
+          color="tertiary"
+          fontSize="text"
+          margin="2rem 0"
+          textAlign="center"
+          fontStyle="italic"
+        >
+          "Meta-programming: Using AI to create slides about AI" 🤖✨
+        </Text>
+      </Appear>
     </Slide>
 
     {/* Q&A */}
@@ -725,9 +852,9 @@ async function processUsers() {
         <Text color="tertiary" fontSize="h3" margin="0 0 1rem 0">
           Let's explore the future of programming together
         </Text>
-        <Text color="tertiary" fontSize="text">
+        {/* <Text color="tertiary" fontSize="text">
           cursor.com | @cursor_ai
-        </Text>
+        </Text> */}
       </FlexBox>
     </Slide>
   </Deck>
