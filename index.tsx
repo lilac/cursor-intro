@@ -807,6 +807,9 @@ async function processUsers() {
               leaked prompt
             </Link>{" "}
             from Cursor's agent mode to understand in-depth how it works
+            <br />
+            <br />
+            <strong>Bonus:</strong> You can also view the <Link href="https://github.com/lilac/cursor-intro/blob/main/ref/Agent%20Prompt.md" target="_blank" color="tertiary" textDecoration="underline">markdown version</Link> of the prompt.
           </ListItem>
         </Appear>
         <Appear>
