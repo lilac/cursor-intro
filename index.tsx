@@ -824,56 +824,84 @@ async function processUsers() {
       </UnorderedList>
     </Slide>
 
-    {/* Getting Started */}
-    {/* <Slide backgroundColor="secondary">
-      <Heading color="tertiary" fontSize="h2" margin="0 0 2rem 0">
-        Getting Started with Cursor
-      </Heading>
-      <UnorderedList color="tertiary" fontSize="text">
-        <Appear>
-          <ListItem margin="1rem 0">
-            <strong>Download:</strong> cursor.com (free trial available)
-          </ListItem>
-        </Appear>
-        <Appear>
-          <ListItem margin="1rem 0">
-            <strong>Import:</strong> Your existing VS Code settings and
-            extensions
-          </ListItem>
-        </Appear>
-        <Appear>
-          <ListItem margin="1rem 0">
-            <strong>Try Tab:</strong> Start with simple completions
-          </ListItem>
-        </Appear>
-        <Appear>
-          <ListItem margin="1rem 0">
-            <strong>Add context:</strong> Include relevant files in chat
-          </ListItem>
-        </Appear>
-        <Appear>
-          <ListItem margin="1rem 0">
-            <strong>Experiment:</strong> Try Apply for larger code changes
-          </ListItem>
-        </Appear>
-        <Appear>
-          <ListItem margin="1rem 0">
-            <strong>Join community:</strong> Discord, forums, documentation
-          </ListItem>
-        </Appear>
-      </UnorderedList>
-      <Appear>
-        <Text
-          color="tertiary"
-          fontSize="text"
-          margin="2rem 0"
-          textAlign="center"
-        >
-          Remember: You're learning to collaborate with AI, not be replaced by
-          it
+    {/* Embrace AGI Revolution */}
+    <Slide backgroundColor="primary">
+      <FlexBox
+        height="100%"
+        flexDirection="column"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Heading color="secondary" fontSize="h2" margin="0 0 2rem 0">
+          🚀 Embrace the AGI Revolution
+        </Heading>
+        <Text color="tertiary" fontSize="h3" margin="0 0 2rem 0" textAlign="center">
+          AGI will change almost everything
         </Text>
-      </Appear>
-    </Slide> */}
+        <Text color="tertiary" fontSize="text" margin="0 0 3rem 0" textAlign="center">
+          Everything that can be mapped to structural data can be mastered by AI<br />
+          and see massive productivity boosts
+        </Text>
+        
+        <FlexBox flexDirection="row" justifyContent="space-between" width="100%">
+          <Box width="48%">
+            <UnorderedList color="tertiary" fontSize="text">
+              <Appear>
+                <ListItem margin="1rem 0">
+                  <strong>💻 Code:</strong>{" "}
+                  <Link href="https://cursor.com" target="_blank" color="secondary">
+                    Cursor
+                  </Link>
+                </ListItem>
+              </Appear>
+              <Appear>
+                <ListItem margin="1rem 0">
+                  <strong>🎨 Image Editing:</strong>{" "}
+                  <Link href="https://adobe.com" target="_blank" color="secondary">
+                    Adobe
+                  </Link>
+                  {", "}
+                  <Link href="https://canva.com" target="_blank" color="secondary">
+                    Canva
+                  </Link>
+                </ListItem>
+              </Appear>
+            </UnorderedList>
+          </Box>
+          <Box width="48%">
+            <UnorderedList color="tertiary" fontSize="text">
+              <Appear>
+                <ListItem margin="1rem 0">
+                  <strong>🎬 Video Generation:</strong>{" "}
+                  <Link href="https://klingai.com" target="_blank" color="secondary">
+                    Kling
+                  </Link>
+                </ListItem>
+              </Appear>
+              <Appear>
+                <ListItem margin="1rem 0">
+                  <strong>📊 Presentations:</strong>{" "}
+                  <Link href="https://gamma.app/ai-powerpoint" target="_blank" color="secondary">
+                    Gamma
+                  </Link>
+                </ListItem>
+              </Appear>
+            </UnorderedList>
+          </Box>
+        </FlexBox>
+        
+        <Appear>
+          <Text
+            color="secondary"
+            fontSize="h3"
+            margin="3rem 0 0 0"
+            textAlign="center"
+          >
+            Don't just watch the revolution — be part of it! 🌟
+          </Text>
+        </Appear>
+      </FlexBox>
+    </Slide>
 
     {/* Bonus Slide */}
     <Slide backgroundColor="secondary">
