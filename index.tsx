@@ -668,6 +668,95 @@ async function processUsers() {
       </Appear>
     </Slide>
 
+    {/* Why Cursor Succeeded */}
+    <Slide backgroundColor="tertiary">
+      <Heading color="primary" fontSize="h2" margin="0 0 2rem 0">
+        Why Cursor Succeeded
+      </Heading>
+      <Text color="secondary" fontSize="h3" margin="0 0 1.5rem 0">
+        Key insight: Think one step further, pursue excellence
+      </Text>
+      
+      <UnorderedList color="primary" fontSize="text">
+        <Appear>
+          <ListItem margin="1.2rem 0">
+            <strong>Beyond autocomplete:</strong> GitHub Copilot → Cursor predicts next actions + Tab navigation
+            <br />
+            <Text fontSize="text" color="secondary" fontStyle="italic" margin="0.5rem 0 0 0">
+              Created the "ambient programming" phenomenon on social media
+            </Text>
+          </ListItem>
+        </Appear>
+        <Appear>
+          <ListItem margin="1.2rem 0">
+            <strong>Beyond chat diffs:</strong> GitHub Copilot → Cursor built in-editor diff interface
+            <br />
+            <Text fontSize="text" color="secondary" fontStyle="italic" margin="0.5rem 0 0 0">
+              Faster review and application of AI changes
+            </Text>
+          </ListItem>
+        </Appear>
+        <Appear>
+          <ListItem margin="1.2rem 0">
+            <strong>Custom models:</strong> Self-developed models optimized for core features
+          </ListItem>
+        </Appear>
+        <Appear>
+          <ListItem margin="1.2rem 0">
+            <strong>Fast iteration:</strong> Early adopter of MCP integration and other innovations
+          </ListItem>
+        </Appear>
+      </UnorderedList>
+    </Slide>
+
+    {/* Cursor's Competitive Moat */}
+    <Slide backgroundColor="secondary">
+      <Heading color="tertiary" fontSize="h2" margin="0 0 2rem 0">
+        Does Cursor Have a Moat?
+      </Heading>
+      
+      <FlexBox flexDirection="column" justifyContent="center" height="70%">
+        <Appear>
+          <Box margin="0 0 2rem 0">
+            <Text color="tertiary" fontSize="h3" margin="0 0 1rem 0">
+              🏰 Shallow Technical Moat
+            </Text>
+            <Text color="tertiary" fontSize="text">
+              Code editors have low switching costs - users can easily move to better/cheaper alternatives
+            </Text>
+          </Box>
+        </Appear>
+
+        <Appear>
+          <Box margin="0 0 2rem 0">
+            <Text color="tertiary" fontSize="h3" margin="0 0 1rem 0">
+              💎 Real Moat: Execution Excellence
+            </Text>
+            <UnorderedList color="tertiary" fontSize="text">
+              <ListItem margin="0.8rem 0">
+                <strong>Talent:</strong> Few teams can pursue excellence and iterate at this speed
+              </ListItem>
+              <ListItem margin="0.8rem 0">
+                <strong>Matthew Effect:</strong> Success breeds more success and resources
+              </ListItem>
+            </UnorderedList>
+          </Box>
+        </Appear>
+
+        <Appear>
+          <Quote
+            color="tertiary"
+            fontSize="text"
+            margin="2rem 0"
+            borderLeft="4px solid white"
+            textAlign="center"
+          >
+            "Don't settle for a product that works - build one that users love"
+          </Quote>
+        </Appear>
+      </FlexBox>
+    </Slide>
+
     {/* Future Vision */}
     <Slide backgroundColor="tertiary">
       <Heading color="primary" fontSize="h2" margin="0 0 2rem 0">
