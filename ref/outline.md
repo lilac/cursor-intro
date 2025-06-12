@@ -1,5 +1,12 @@
 # Create a deck on cursor's features and how it works
 
+## Introduction
+
+- Cursor帮你提效，你是否好奇它是如何实现的
+- 前有大厂的Github Copilot，Cursor凭什么突围成为黑马？
+- Cursor有护城河吗？
+- 带着这些问题，让我们打开它的引擎盖子，看看它如何用3年时间成长为[估值99亿](https://www.cursor.com/cn/blog/series-c)的现象级产品。
+
 ## Features
 
 - Tab autocomplete
