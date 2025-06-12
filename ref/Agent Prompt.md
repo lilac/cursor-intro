@@ -188,11 +188,9 @@ Retrieve the history of recent changes made to files in the workspace. This tool
 
 You **MUST** use the following format when citing code regions or blocks:
 
-```
-```startLine:endLine:filepath
-// ... existing code ...
-```
-```
+    ```startLine:endLine:filepath
+    // ... existing code ...
+    ```
 
 This is the **ONLY** acceptable format for code citations. The format is `startLine:endLine:filepath` where startLine and endLine are line numbers.
 
