@@ -478,7 +478,7 @@ async function processUsers() {
     {/* Technical Architecture */}
     <Slide backgroundColor="primary">
       <Heading color="secondary" fontSize="h2" margin="0 0 2rem 0">
-        Under the Hood
+        <Link href="https://newsletter.pragmaticengineer.com/p/cursor" target="_blank">Under the Hood</Link>
       </Heading>
       <FlexBox flexDirection="column">
         <Text color="tertiary" fontSize="h3" margin="0 0 1rem 0">
