@@ -1,6 +1,17 @@
-# cursor
+# Cursor Presentation
 
-Made with ❤️ and [Spectacle](https://github.com/FormidableLabs/spectacle/).
+This presentation was built with ❤️ using [Spectacle](https://github.com/FormidableLabs/spectacle/), a powerful React-based presentation library.
+
+## Preview
+
+### Live Preview
+To see the interactive presentation with animations and speaker notes:
+1. Run `pnpm install` to install dependencies
+2. Run `pnpm start` to start the development server
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+### Static Preview
+For a quick static preview, you can view the PDF version [here](./dist/cursor.pdf).
 
 ## Running your presentation
 
